@@ -1,6 +1,6 @@
 package main;
 
-import Provider.HardcodedStudentsProvider;
+import provider.HardcodedStudentsProvider;
 import institution.University;
 import institution.interlink.Internship;
 
@@ -9,9 +9,9 @@ public class Application {
         University university = new University("CH.U.I.");
         university.addStudents(new HardcodedStudentsProvider().getStudents());
         Internship internship = new Internship("Interlink");
-        internship.choosePassingStudents(university.getStudents());
+        internship.setStudents(university.getStudents());
 
         System.out.println("List of internship's students:");
-        System.out.println(internship.getStudents());
+        System.out.println(internship.getPassedStudents());
     }
 }

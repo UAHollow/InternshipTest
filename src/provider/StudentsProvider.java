@@ -1,4 +1,4 @@
-package Provider;
+package provider;
 
 import person.Student;
 import java.util.List;

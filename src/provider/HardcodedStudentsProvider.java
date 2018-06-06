@@ -1,4 +1,4 @@
-package Provider;
+package provider;
 
 import person.Student;
 
@@ -12,6 +12,9 @@ public class HardcodedStudentsProvider implements StudentsProvider{
         students.add(new Student("Andrew Kostenko"));
         students.add(new Student("Julia Veselkina"));
         students.add(new Student("Maria Perechrest"));
+        students.add(new Student("Alexandr Borovskiy"));
+        students.add(new Student("Anton Zinchenko"));
+        students.add(new Student("Olexiy Volik"));
         return students;
     }
 }
