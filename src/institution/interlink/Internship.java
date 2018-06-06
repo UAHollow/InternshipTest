@@ -18,8 +18,16 @@ public class Internship {
         this.studentsThatPassed = studentsThatPassed;
     }
 
+    public void choosePassingStudents(List<Student> students){
+        for (Student studentsUndergoingATest : students) {
+            if (studentsUndergoingATest.getKnowledge().getLevel() >= 3){
+                this.studentsThatPassed.add(studentsUndergoingATest);
+            }
+        }
+    }
+
     public String getStudents() {
-        StringBuilder stringBuilder = new StringBuilder("");
+        StringBuilder stringBuilder = new StringBuilder();
         for (Student passedStudents : this.studentsThatPassed) {
             stringBuilder.append(passedStudents.getName());
             stringBuilder.append(" ") ;
